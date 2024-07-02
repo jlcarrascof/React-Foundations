@@ -3,7 +3,11 @@ import TextInput from './components/TextInput'
 function App() {
 
   return (
-     <TextInput />
+    <div>
+      <TextInput />
+      <TextInput />
+      <TextInput />
+    </div>
   )
 
 }
