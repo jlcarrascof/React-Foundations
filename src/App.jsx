@@ -1,7 +1,9 @@
+import TextInput from './components/TextInput'
+
 function App() {
 
   return (
-     <h1>Hello, world!</h1>
+     <TextInput />
   )
 
 }
