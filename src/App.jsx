@@ -4,9 +4,8 @@ function App() {
 
   return (
     <div>
-      <TextInput />
-      <TextInput />
-      <TextInput />
+      <TextInput row={3} />
+      <TextInput row={6} />
     </div>
   )
 
