@@ -4,8 +4,8 @@ function App() {
 
   return (
     <div>
-      <TextInput row={3} />
-      <TextInput row={6} />
+      <TextInput placeholder={"What's happening ... "} maxLength={125} />
+      <TextInput placeholder={"Tell me the news ... "} maxLength={250} />
     </div>
   )
 
