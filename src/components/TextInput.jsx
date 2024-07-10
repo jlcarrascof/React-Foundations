@@ -1,7 +1,7 @@
-export default function TextInput() {
+export default function TextInput(props) {
     return (
         <div>
-            <textarea placeholder={"What's happening ... "} maxLength={125} />
+            <textarea placeholder={props.placeholder} maxLength={props.maxLength} />
         </div>
     )
 }
