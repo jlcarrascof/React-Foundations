@@ -3,14 +3,13 @@ import styles from "./TextInput.module.css";
 
 export default function TextInput({placeholder = "What's happening ... ", maxLength, ...props}) {
 
-    const [counter, setCounter] = useState(0);
-    let limLength = 125;
+    const [text, setText] = useState('');
 
     return (
         <div>
-            <textarea className={styles.input} placeholder={placeholder} maxLength={maxLength} {...props} />
-            <p>{counter} / {limLength}</p>
-            <button onClick={anyFunction()}>Update Counter</button>
+            <textarea className={styles.input} placeholder={placeholder} maxLength={maxLength}
+            value={text} onChange={onTextChange} {...props} />
+            <p>{text.length} / {maxLength}</p>
         </div>
     )
 }
