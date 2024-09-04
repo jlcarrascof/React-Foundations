@@ -22,7 +22,7 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
                 className={styles.input}
                 placeholder={placeholder}
                 maxLength={maxLength}
-                value={text}
+                defaultValue={10}
                 onChange={onTextChange}
                  {...props} />
             <p>{text.length} / {maxLength}</p>
