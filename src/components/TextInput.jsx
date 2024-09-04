@@ -13,7 +13,7 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
     }
 
     return (
-        <div>
+        <form onSubmit={sendTweet}>
             <textarea
                 className={styles.input}
                 placeholder={placeholder}
@@ -22,7 +22,7 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
                 onChange={onTextChange}
                  {...props} />
             <p>{text.length} / {maxLength}</p>
-            <button>Send</button>
-        </div>
+            <button type={'submit'}>Send</button>
+        </form>
     )
 }
