@@ -14,8 +14,7 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
     }
 
     function sendTweet(event) {
-        event.preventDefault();
-        console.log({text});
+        setTweetList([...tweetList, text]);
     }
 
     return (
