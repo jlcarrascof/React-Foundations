@@ -13,8 +13,6 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
         }
     }
 
-    console.log(inputElement.current.defaultValue)
-
     return (
         <div>
             <textarea
@@ -26,6 +24,7 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
                 onChange={onTextChange}
                  {...props} />
             <p>{text.length} / {maxLength}</p>
+            <button onClick={() => inputElement.current.defaultValue}>Test</button>
         </div>
     )
 }
