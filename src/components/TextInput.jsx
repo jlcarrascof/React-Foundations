@@ -4,7 +4,7 @@ import styles from "./TextInput.module.css";
 export default function TextInput({placeholder = "What's happening ... ", maxLength, ...props}) {
 
     const [text, setText] = useState('');
-    const [tweetList, setTweetList] = useState(['Whats up, buddy?', 'How is going your day?']);]
+    const [tweetList, setTweetList] = useState(['Whats up, buddy?', 'How is going your day?']);
 
     function onTextChange(event) {
         const text = event.target.value
@@ -29,6 +29,11 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
                  {...props} />
             <p>{text.length} / {maxLength}</p>
             <button onClick={sendTweet}>Send</button>
+            {tweetList.map(tweet => {
+                return(
+                    <p>{tweet}</p>
+                )
+            })}
         </div>
     )
 }
