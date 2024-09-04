@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./TextInput.module.css";
 
 export default function TextInput({placeholder = "What's happening ... ", maxLength, ...props}) {
 
     const [text, setText] = useState('');
+    const inputElement = useRef();
 
     function onTextChange(event) {
         const text = event.target.value
@@ -12,10 +13,18 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
         }
     }
 
+    console.log(inputElement.current.defaultValue)
+
     return (
         <div>
-            <textarea className={styles.input} placeholder={placeholder} maxLength={maxLength}
-            value={text} onChange={onTextChange} {...props} />
+            <textarea
+                ref={inputElement}
+                className={styles.input}
+                placeholder={placeholder}
+                maxLength={maxLength}
+                value={text}
+                onChange={onTextChange}
+                 {...props} />
             <p>{text.length} / {maxLength}</p>
         </div>
     )
