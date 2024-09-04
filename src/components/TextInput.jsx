@@ -24,7 +24,7 @@ export default function TextInput({placeholder = "What's happening ... ", maxLen
                 onChange={onTextChange}
                  {...props} />
             <p>{text.length} / {maxLength}</p>
-            <button onClick={() => inputElement.current.defaultValue}>Test</button>
+            <button onClick={() => console.log(inputElement.current.value)}>Test</button>
         </div>
     )
 }
